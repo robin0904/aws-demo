@@ -16,8 +16,14 @@ resource "aws_security_group" "master" {
 
   # Allow DCV access (port 8444)
   ingress {
-    from_port   = 8444
-    to_port     = 8444
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  ingress {
+    from_port   = 3389
+    to_port     = 3389
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
