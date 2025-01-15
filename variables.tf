@@ -32,23 +32,23 @@ variable "instance_name4" {
 variable "metasploit_instance_count" {
   description = "Number of Metasploit instances to launch"
   type        = number
-  default     = 2
+  default     = 1
 }
 
 variable "marlinspike_instance_count" {
   description = "Number of MarlinSpike instances to launch"
   type        = number
-  default     = 2
+  default     = 1
 }
 
 variable "windows_instance_count" {
   description = "Number of Windows instances to launch"
   type        = number
-  default     = 2
+  default     = 1
 }
 
 variable "kali_instance_count" {
   description = "Number of Kali Linux instances to launch"
   type        = number
-  default     = 2
+  default     = 1
 }
