@@ -56,7 +56,7 @@ resource "aws_key_pair" "master_key_pair" {
 # Metasploit Server instance with dynamic username and session setup
 resource "aws_instance" "Metasploit" {
   ami               = "ami-0f6d9f901bbe83896"  # Replace with your desired CentOS AMI ID
-  instance_type     = "c6a.2xlarge"            # Replace with your desired instance type
+  instance_type     = "t3a.medium"            # Replace with your desired instance type
   key_name          = aws_key_pair.master_key_pair.key_name
   subnet_id         = "subnet-090f51c9318322eeb"
   availability_zone = "ap-south-1a"
@@ -82,7 +82,7 @@ output "Metasploit_Server_Public_IP" {
 # MarlinSpike Server instance with dynamic username and session setup
 resource "aws_instance" "MarlinSpike" {
   ami               = "ami-031799a944a78f0ae"  # Replace with your desired CentOS AMI ID
-  instance_type     = "c6a.2xlarge"            # Replace with your desired instance type
+  instance_type     = "t3a.medium"            # Replace with your desired instance type
   key_name          = aws_key_pair.master_key_pair.key_name
   subnet_id         = "subnet-090f51c9318322eeb"
   availability_zone = "ap-south-1b"
@@ -108,7 +108,7 @@ output "MarlinSpike_Server_Public_IP" {
 # Windows Server instance with dynamic username and session setup
 resource "aws_instance" "Windows-Server" {
   ami               = "ami-08c7b1b96cec6b75e"  # Replace with your desired CentOS AMI ID
-  instance_type     = "c6a.2xlarge"            # Replace with your desired instance type
+  instance_type     = "t3a.medium"            # Replace with your desired instance type
   key_name          = aws_key_pair.master_key_pair.key_name
   subnet_id         = "subnet-090f51c9318322eeb"
   availability_zone = "ap-south-1b"
@@ -134,7 +134,7 @@ output "Windows_Server_Server_Public_IP" {
 # KaliLinux instance with dynamic username and session setup
 resource "aws_instance" "KaliLinux" {
   ami               = "ami-0ce5862ea490b6e2a"  # Replace with your desired CentOS AMI ID
-  instance_type     = "c6a.2xlarge"            # Replace with your desired instance type
+  instance_type     = "t3a.medium"            # Replace with your desired instance type
   key_name          = aws_key_pair.master_key_pair.key_name
   subnet_id         = "subnet-090f51c9318322eeb"
   availability_zone = "ap-south-1b"
