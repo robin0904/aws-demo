@@ -338,3 +338,4 @@ output "Windows_Server_Passwords" {
 
 output "KaliLinux_Server_Public_IPs" {
   value = aws_instance.KaliLinux[*].public_ip
+}
