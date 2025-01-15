@@ -77,6 +77,7 @@ resource "local_file" "local_key_pair" {
 # Output the Metasploit Server Public IP
 output "Metasploit_Server_Public_IP" {
   value = aws_instance.Metasploit.public_ip
+  depends_on = [ aws_instance.Metasploit ]
 }
 
 # MarlinSpike Server instance with dynamic username and session setup
@@ -103,6 +104,7 @@ resource "local_file" "local_key_pair2" {
 # Output the MarlinSpike Server Public IP
 output "MarlinSpike_Server_Public_IP" {
   value = aws_instance.MarlinSpike.public_ip
+  depends_on = [ aws_instance.MarlinSpike ]
 }
 
 # Windows Server instance with dynamic username and session setup
@@ -129,6 +131,7 @@ resource "local_file" "local_key_pair3" {
 # Output the Windows-Server Server Public IP
 output "Windows_Server_Server_Public_IP" {
   value = aws_instance.Windows-Server.public_ip
+  depends_on = [ aws_instance.Windows-Server ]
 }
 
 # KaliLinux instance with dynamic username and session setup
@@ -155,5 +158,6 @@ resource "local_file" "local_key_pair4" {
 # Output the KaliLinux Server Public IP
 output "KaliLinux_Server_Public_IP" {
   value = aws_instance.KaliLinux.public_ip
+  depends_on = [ aws_instance.KaliLinux ]
 }
 
