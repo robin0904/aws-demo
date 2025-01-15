@@ -94,7 +94,7 @@ resource "aws_instance" "MarlinSpike" {
 }
 
 # Save the private key locally
-resource "local_file" "local_key_pair" {
+resource "local_file" "local_key_pair2" {
   filename        = "${var.instance_name2}.pem"
   file_permission = "0400"
   content         = tls_private_key.master_key_gen.private_key_pem
@@ -120,7 +120,7 @@ resource "aws_instance" "Windows-Server" {
 }
 
 # Save the private key locally
-resource "local_file" "local_key_pair" {
+resource "local_file" "local_key_pair3" {
   filename        = "${var.instance_name3}.pem"
   file_permission = "0400"
   content         = tls_private_key.master_key_gen.private_key_pem
@@ -146,7 +146,7 @@ resource "aws_instance" "KaliLinux" {
 }
 
 # Save the private key locally
-resource "local_file" "local_key_pair" {
+resource "local_file" "local_key_pair4" {
   filename        = "${var.instance_name4}.pem"
   file_permission = "0400"
   content         = tls_private_key.master_key_gen.private_key_pem
