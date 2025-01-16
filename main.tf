@@ -95,7 +95,7 @@ resource "aws_instance" "basic_pentesting" {
 
 # Exploitable Windows
 resource "aws_instance" "Windows-10-Pro" {
-  ami           = "ami-08c7b1b96cec6b75e"  # Replace with your desired AMI ID
+  ami           = "ami-0e531e2365203ce30"  # Replace with your desired AMI ID
   instance_type = "t3.medium"  # Replace with your desired instance type
   key_name      = aws_key_pair.master-key-pair.key_name
   subnet_id = "subnet-090f51c9318322eeb"
@@ -146,7 +146,7 @@ output "exploitable_Windows_Username" {
   value = "Administrator"
 }
 output "exploitable_Windows_Password" {
-  value = "password@123"
+  value = "t&1Wgv!=*HxXsi;Ca8Q7oP);*hidnQ5@"
 }
 
 
