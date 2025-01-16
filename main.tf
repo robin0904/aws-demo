@@ -120,11 +120,11 @@ output "pem_file_for_ssh" {
 }
 
 output "kali_server" {
-  value = aws_instance.kali_server.private_ip
+  value = aws_instance.kali_server.public_ip
 }
 
 output "metasploit" {
-  value = aws_instance.metasploit.private_ip
+  value = aws_instance.metasploit.public_ip
 }
 
 output "metasploit_user_and_password" {
@@ -132,7 +132,7 @@ output "metasploit_user_and_password" {
 }
 
 output "marlinspike" {
-  value = aws_instance.basic_pentesting.private_ip
+  value = aws_instance.basic_pentesting.public_ip
 }
 
 output "marlinspike_user_and_password" {
@@ -140,7 +140,7 @@ output "marlinspike_user_and_password" {
 }
 
 output "exploitable_Windows" {
-  value = aws_instance.Windows-10-Pro.private_ip
+  value = aws_instance.Windows-10-Pro.public_ip
 }
 output "exploitable_Windows_Username" {
   value = "Administrator"
