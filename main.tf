@@ -54,7 +54,7 @@ resource "aws_instance" "kali_server" {
   instance_type = "t3a.2xlarge"  # Replace with your desired instance type
   key_name      = aws_key_pair.master-key-pair.key_name
   subnet_id = "subnet-090f51c9318322eeb"
-  availability_zone = "ap-south-1b"
+  availability_zone = "ap-south-1a"
   
   security_groups = [aws_security_group.master.id]
   
@@ -69,7 +69,7 @@ resource "aws_instance" "metasploit" {
   instance_type = "t3a.small"  # Replace with your desired instance type
   key_name      = aws_key_pair.master-key-pair.key_name
   subnet_id = "subnet-090f51c9318322eeb"
-  availability_zone = "ap-south-1b"
+  availability_zone = "ap-south-1a"
 
   security_groups = [aws_security_group.master.id]
   
@@ -84,7 +84,7 @@ resource "aws_instance" "basic_pentesting" {
   instance_type = "t3a.small"  # Replace with your desired instance type
   key_name      = aws_key_pair.master-key-pair.key_name
   subnet_id = "subnet-090f51c9318322eeb"
-  availability_zone = "ap-south-1b"
+  availability_zone = "ap-south-1a"
 
   security_groups = [aws_security_group.master.id]
   
@@ -99,7 +99,7 @@ resource "aws_instance" "Windows-10-Pro" {
   instance_type = "t3.medium"  # Replace with your desired instance type
   key_name      = aws_key_pair.master-key-pair.key_name
   subnet_id = "subnet-090f51c9318322eeb"
-  availability_zone = "ap-south-1b"
+  availability_zone = "ap-south-1a"
 
   security_groups = [aws_security_group.master.id]
 
